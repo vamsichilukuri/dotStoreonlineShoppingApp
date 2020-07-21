@@ -11,7 +11,7 @@ router.get("/users", async (req, res) => {
     console.log("ERROR" + error);
   }
 });
-//GET req to get all users details
+//GET req to get users with guven id details
 router.get("/users/:id", async (req, res) => {
   try {
     const users = await User.findById(req.params.id);
